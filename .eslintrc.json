@@ -1,0 +1,94 @@
+{ 
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"],
+        "moduleDirectory": ["node_modules", "./modules"]
+      },
+      "alias": {
+        "map": [
+          // ["@test-utils","./src/modules/test-utils.tsx"],
+          // ["@styles","./src/styles"],
+          // ["@layouts","./src/layouts/index"],
+          // ["@design", "./modules/design"],
+          // ["@constants", "./modules/constants"]
+          // ["@elements", "./modules/elements"],
+          // ["@api","./modules/api"],
+          // ["@hooks","./modules/hooks"],
+          // ["@constants", "./modules/constants"],
+          // ["@redux","./modules/redux"],
+          // ["@typescript","./modules/typescript"],
+          // ["@utils", "./modules/utils"],
+          // ["@components", "./components"],
+          // ["@views", "./views"]
+        ],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "airbnb",
+    "plugin:prettier/recommended",
+    "plugin:import/typescript",
+    "plugin:jsx-a11y/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "jsx-a11y",
+    "prettier",
+    "simple-import-sort",
+    "import"
+  ],
+  "rules": {
+    "arrow-parens": "off",
+    "import/extensions": "off",
+    "semi": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }],
+    "prettier/prettier": [
+      "error", {
+        "semi": true,
+        "singleQuote": true 
+      }
+    ],
+    // "simple-import-sort/sort": "error",
+    "simple-import-sort/imports": "error",
+    "import/no-unresolved": "off",
+    "sort-imports": "off",
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error",
+    "react/jsx-props-no-spreading": "off",
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/state-in-constructor": "off",
+    "no-param-reassign": "off",
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": ["error"],
+    "no-use-before-define": "off"
+  },
+  "overrides": [
+    {
+      "files": "server/**/*.js",
+      "rules": {
+        "simple-import-sort/sort": "off",
+        "import/order": ["error", { "newlines-between": "always" }]
+      }
+    }
+  ]
+}
