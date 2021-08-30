@@ -112,7 +112,7 @@ export default function PlantSelect() {
 
   return (
     <View style={styles.container}>
-      <View style={styles.header}>
+      {/* <View style={styles.header}>
         <Header />
         <Text style={styles.title}>Em qual ambiente</Text>
         <Text style={styles.subTitle}>você quer colocar sua planta</Text>
@@ -147,7 +147,7 @@ export default function PlantSelect() {
             loadMore ? <ActivityIndicator color={colors.green} /> : <></>
           }
         />
-      </View>
+      </View> */}
     </View>
   );
 }
